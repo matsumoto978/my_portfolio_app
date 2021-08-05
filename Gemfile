@@ -11,10 +11,9 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'devise'
-# 多言語対応(Rails 6の場合)
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
-# ***** 以上を追加 *****
+gem 'bootstrap', '~> 4.5.0'
 
 
 gem 'bootsnap', '>= 1.4.4', require: false

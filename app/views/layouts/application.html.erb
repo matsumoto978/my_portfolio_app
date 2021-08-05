@@ -9,11 +9,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-  <header>
-    <%= render "layouts/header" %>
-  </header>
+    <header>
+      <%= render "layouts/header" %>
+    </header>
     <main>
-      <#% max_width メソッドは application_helper.rb に記載 %>
+      <button type="button" class="btn btn-primary">Primary</button>
       <div class="base-container <%= max_width %>">
         <%= yield %>
       </div>
