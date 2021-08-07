@@ -1,5 +1,5 @@
 require_relative "boot"
-
+require "csv"
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
@@ -35,5 +35,6 @@ module MyPortfolioApp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.autoload_paths << Rails.root.join("lib/autoloads")
   end
 end
