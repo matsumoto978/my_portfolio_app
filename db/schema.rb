@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2021_08_07_065722) do
   enable_extension "plpgsql"
 
   create_table "gyms", force: :cascade do |t|
-    t.integer "number"
     t.string "gyms"
     t.string "area"
     t.string "google_map_url"
@@ -35,5 +34,4 @@ ActiveRecord::Schema.define(version: 2021_08_07_065722) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
 end
