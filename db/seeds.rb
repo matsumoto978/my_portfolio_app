@@ -7,8 +7,8 @@ User.find_or_create_by!(email: EMAIL) do |user|
   puts 'ユーザーの初期データインポートに成功しました。'
 end 
 
-AdminUser.find_or_create_by!(email: EMAIL) do |user|
-  admin_users = PASSWORD
+AdminUser.find_or_create_by!(email: ADMIN_EMAIL) do |admin_user|
+  admin_user.password = PASSWORD
   puts '管理者ユーザーの初期データインポートに成功しました。'
 end
 
