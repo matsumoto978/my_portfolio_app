@@ -15,7 +15,7 @@ gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 gem 'bootstrap', '~> 4.5.0'
 gem 'activeadmin'
-
+gem "devise-bootstrap-views", "~> 1.0"
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
