@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MyPortfolioApp</title>
+    <title>handball area</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,15 +10,16 @@
   </head>
   <body>
     <header>
-      <%= render "layouts/header" %>
-    </header>
-    <main>
-      <button type="button" class="btn btn-primary">Primary</button>
-      <div class="base-container <%= max_width %>">
-        <%= yield %>
-      </div>
-    </main>
-    <footer>
-    </footer>
-  </body>
-</html>
+      <header class="bg-primary fixed-top">
+        <%= render "layouts/header" %>
+      </header>
+      <%= render "layouts/flash" %>
+      <main>
+        <div class="base-container <%= max_width %>">
+          <%= yield %>
+        </div>
+      </main>
+      <footer>
+      </footer>
+    </body>
+  </html>
