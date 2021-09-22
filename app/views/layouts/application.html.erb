@@ -10,12 +10,12 @@
   </head>
   <body>
     <header>
-      <header class="bg-primary fixed-top">
+      <header class="bg-dark fixed-top">
         <%= render "layouts/header" %>
       </header>
       <%= render "layouts/flash" %>
       <main>
-        <div class="base-container <%= max_width %>">
+        <div class="container-fluid py-5 mw-md">
           <%= yield %>
         </div>
       </main>

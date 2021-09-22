@@ -5,14 +5,11 @@
 .base-container {
   margin: 7%;
   padding: 30px;
-  margin: 7%;
   margin-right: auto;
-  margin-left: aout;
+  margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-
-/* max-width */
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   .mw-#{$breakpoint} {
