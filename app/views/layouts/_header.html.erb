@@ -7,14 +7,28 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav mr-auto">　      
         <li class="nav-item">
-          <a class="nav-link" href="#">施設一覧</a>
+          <a class="nav-link" href="gyms">施設一覧</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">ログイン</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">新規登録</a>
-        </li>
+        <% if user_signed_in? %>
+          <!-- ログイン時 -->
+          <li class="nav-item active">
+            <%= link_to "アカウント編集", edit_user_registration_path, class: "nav-item nav-link active"%>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "ログアウト", destroy_user_session_path, class: "nav-item nav-link active", method: :delete, data: { confirm: "ログアウトしますか？" } %>
+          </li>
+        <% else %>
+          <!-- 非ログイン時 -->
+          <li class="nav-item active">
+            <%= link_to "ログイン", new_user_session_path, class: "nav-item nav-link active" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "新規登録", new_user_registration_path, class: "nav-item nav-link active" %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to "ゲストログイン", gyms_guest_sign_in_path, method: :post, class: "nav-item nav-link active" %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>

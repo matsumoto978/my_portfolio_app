@@ -1,4 +1,6 @@
 class GymsController < ApplicationController
+  before_action :authenticate_user!, except: :index
+
   def index
     @gyms = Gym.all
   end
